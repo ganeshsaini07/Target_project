@@ -1,0 +1,91 @@
+
+let result = document.getElementById('result')
+
+const btn = document.querySelectorAll('button')
+
+let operator = document.querySelectorAll('.operator')
+
+let fristoprants= ' '
+
+let secondoprants= ' '
+
+
+
+
+let string = ' '
+
+btn.forEach((a) => {
+    console.log(a.value);
+    a.addEventListener('click', function (e) {
+        // console.log(e);
+        // console.log(e.target.innerText);
+
+        if (e.target.innerText == "D") {
+         result = string.substring(0,(string.length)-1)
+         console.log(result);
+        }
+
+        else if (e.target.innerText == "=" ) {
+            
+            function addNum(fristoprants,secondoprants) {
+
+                switch (fristoprants,secondoprants) {
+                    case e.target.innerText == "+":
+                        string=fristoprants+secondoprants
+                        result.value=string
+                        break;
+
+                        case e.target.innerText == "-":
+                             fristoprants-secondoprants
+                            break;
+
+                            case e.target.innerText == "*":
+                         fristoprants*secondoprants
+                        break;
+
+                        case e.target.innerText == "/":
+                             fristoprants/secondoprants
+                            break;
+
+
+                    default:
+                        break;
+                }
+                
+
+            }
+            console.log(addNum());
+        
+        }
+
+        else {
+            string += e.target.innerText
+            result= string
+
+            console.log(result);
+        }
+
+        //    result.value=string
+
+        // let string='' 
+
+        // if (e.target ==  "btn"){
+        //      string += ' '
+        //      result.value = string
+
+        // }
+
+
+
+    })
+})
+
+
+
+// operator.forEach((b)=>{
+// b.addEventListener('click' , function(f){
+//      f.target.innerHTML="hey"
+// })
+// })
+
+
