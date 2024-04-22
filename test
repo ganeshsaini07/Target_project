@@ -75,17 +75,100 @@ btn.forEach((a) => {
 
         // }
 
-
-
     })
 })
-
-
 
 // operator.forEach((b)=>{
 // b.addEventListener('click' , function(f){
 //      f.target.innerHTML="hey"
 // })
 // })
+
+
+
+
+////////////////////////////////////////////////////////////////////////////////////////////
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    }
+    .row{
+        display: flex;
+    justify-content: space-between;
+    padding: 8px 0px;
+    }
+    button{
+        padding: 5px 10px;
+    }
+    input{
+        height: 40px;
+    }
+</style>
+<body>
+    
+    <input type="text" id="result">
+
+    <div class="row">
+        <button id="btn">8</button>
+        <button id="btn">7</button>
+        <button id="btn">9</button>
+        <button id="btn">D</button>
+
+    </div>
+    <div class="row">
+        <button id="btn">4</button>
+        <button id="btn">5</button>
+        <button id="btn">6</button>
+                    <button id="btn" class="operator">+</button>
+    </div>
+    <div class="row">
+        
+                    <button id="btn">1</button>
+                    <button id="btn">2</button>
+                    <button id="btn">3</button>
+                    <button id="btn" class="operator">-</button>
+    </div>
+
+    <div class="row">
+        <button id="btn">0</button>
+        <button id="btn">/</button>
+        <button id="btn" class="operator">x</button>
+        <button id="btn" class="equle">=</button>
+    </div>
+</body>
+<script>
+    const buttons= document.querySelectorAll('button')
+    const input= document.querySelector('input')
+
+
+    let string=""
+
+    buttons.forEach((item)=>{
+            //   console.log(item);
+              item.addEventListener('click' , function(e){
+                // console.log(e.target);
+               
+              string=string + e.target.innerHtml  
+
+              input.value=string
+
+
+              })
+    })
+
+</script>
+</html>
 
 
